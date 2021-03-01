@@ -1,0 +1,32 @@
+{
+    "name": "agefans",
+    "url": "https://agefans.org",
+    "index": "index.js",
+    "collections": [
+        "details.js",
+        "video.js"
+    ],
+    "search": {
+        "src": "search.js",
+        "data": {
+            "url": "https://agefans.org/search?q={0}&page={1}"
+        }
+    },
+    "categories": [
+        {
+            "title": "首页",
+            "id": "home",
+            "url": "https://agefans.org/"
+        },
+        {
+            "title": "新番/更新",
+            "id": "lastest",
+            "url": "https://agefans.org/latest"
+        },
+        {
+            "title": "补番推荐",
+            "id": "bufan",
+            "url": "https://agefans.org/bufan?page={0}"
+        }
+    ]
+}
