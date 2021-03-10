@@ -52,13 +52,14 @@ class VideoCollection extends Collection {
 		let items = [];
 		for (let data of json.result) {
 			let item = glib.DataItem.new();
-			item.link = url;
+            let path = on_play(data.cfg, data.id);
+            let fullurl = "https://agefans.org" + path;
+			item.link = fullurl;
 			item.title = "线路 " + data.cfg_n;
 			// let url = await 
-            let path = on_play(data.cfg, data.id);
             if (path) {
                 item.data = {
-                    link: "https://agefans.org" + path,
+                    link: fullurl,
                     handler: "handler",
                 };
                 items.push(item);
